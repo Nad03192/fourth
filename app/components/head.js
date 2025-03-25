@@ -1,14 +1,16 @@
 import Link from "next/link";
 import Logo from "../components/logo"
+import { useState } from "react";
 export default function Header({ activeSection }) {
+    const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="container mx-auto flex items-center justify-between pt-10  bg-black text-white">
+    <header className="container mx-auto flex items-center justify-between pt-10 p-1 bg-black text-white">
       <a href="/" className="flex items-center">
         <Logo/>
       </a>
 
       {/* Text on the Right */}
-      <div className="text-xl font-semibold">
+      <div className="text-xl font-semibold hidden sm:flex">
         <div className="flex items-center gap-5">
           <Link
             href=""
@@ -41,6 +43,64 @@ export default function Header({ activeSection }) {
             contact us
           </Link>
         </div>
+     
+      </div>
+      <div className="md:hidden flex items-center"  onClick={() => setIsOpen(!isOpen)}>
+        <svg
+          className="w-8 h-8 text-white cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+      </div>
+      <div className={`md:hidden fixed top-28 left-0 w-full h-full z-50  bg-black dark:bg-gray-800 transition-all duration-300 flex flex-col items-center pt-6 ${isOpen ? "block" : "hidden"}`}>
+  <div className="flex flex-col items-center space-y-6 py-4 px-4 text-center">
+    {/* Links */}
+    <div className="text-xl font-semibold">
+      <div className="flex flex-col items-center gap-5">
+        <Link
+          href=""
+          className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'aboutus' ? 'font-bold text-white' : ''}`}
+        >
+          about us
+        </Link>
+        <Link
+          href="/ourwork"
+          className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'ourwork' ? 'font-bold text-white' : ''}`}
+        >
+          our work
+        </Link>
+        <Link
+          href="/ourclients"
+          className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'ourclients' ? 'font-bold text-white' : ''}`}
+        >
+          our clients
+        </Link>
+        <Link
+          href="/ourteam"
+          className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'ourteam' ? 'font-bold text-white' : ''}`}
+        >
+          our team
+        </Link>
+        <Link
+          href="/contactus"
+          className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'contact' ? 'font-bold text-white' : ''}`}
+        >
+          contact us
+        </Link>
+      </div>
+    </div>
+  </div>
+
+
       </div>
     </header>
   );
