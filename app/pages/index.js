@@ -5,7 +5,7 @@ export default function HomePage() {
 
   
   return (
-  <div className="bg-black w-[100%] h-full">
+    <div className="bg-black w-full min-h-screen overflow-hidden">
     <div>
  <Header activeSection="" />
 <Banner/>

@@ -45,7 +45,8 @@ export default function Header({ activeSection }) {
         </div>
      
       </div>
-      <div className="md:hidden flex items-center"  onClick={() => setIsOpen(!isOpen)}>
+      {/* Hamburger Icon */}
+      <div className="md:hidden flex items-center" onClick={() => setIsOpen(!isOpen)}>
         <svg
           className="w-8 h-8 text-white cursor-pointer"
           xmlns="http://www.w3.org/2000/svg"
@@ -53,12 +54,21 @@ export default function Header({ activeSection }) {
           viewBox="0 0 24 24"
           stroke="currentColor"
         >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="M4 6h16M4 12h16M4 18h16"
-          />
+          {isOpen ? (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            />
+          ) : (
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          )}
         </svg>
       </div>
       <div className={`md:hidden fixed top-28 left-0 w-full h-full z-50  bg-black dark:bg-gray-800 transition-all duration-300 flex flex-col items-center pt-6 ${isOpen ? "block" : "hidden"}`}>

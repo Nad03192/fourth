@@ -24,7 +24,7 @@ export default function Banner() {
            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center">
            <p className="mt-4 text-xl sm:text-6xl w-[400px] sm:w-[700px]  font-[5]"    style={{ fontFamily: 'Poppins',lineHeight: '1.2'}} 
             >
-  here's a teeny-weeny glimpse of our work. What's coming later is
+  here's a teeny-weeny glimpse of our work. <br />What's coming later is
 </p>
 <p className="sm:text-7xl text-2xl font-bold" style={{ fontFamily: 'Poppins', }}>
    <span className="text-red-500">even</span> greater
