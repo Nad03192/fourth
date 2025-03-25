@@ -5,9 +5,11 @@ export default function HomePage() {
 
   
   return (
-  <div className="bg-black w-[100%]">
+  <div className="bg-black w-[100%] h-full">
+    <div>
  <Header activeSection="" />
 <Banner/>
+</div>
       </div> 
   )
   ;

@@ -1,6 +1,6 @@
 export default function Banner() {
     return (
-      <div className="container mx-auto relative flex items-center justify-center bg-gray-black text-white py-12">
+      <div className="container mx-auto relative h-full  flex items-center justify-center bg-black text-white py-12">
         {/* Fixed Size Container */}
         <div className="relative w-[300px] items-center sm:w-[1000px] h-[500px] bg-transparent">
           
@@ -22,7 +22,7 @@ export default function Banner() {
         </div>
            {/* Text in Front */}
            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 text-center">
-           <p className="mt-4 text-xl sm:text-6xl w-[400px] sm:w-[700px]  tracking-wide"    style={{ fontFamily: 'Poppins', fontWeight: '10' ,lineHeight: '1.2'}} 
+           <p className="mt-4 text-xl sm:text-6xl w-[400px] sm:w-[700px]  font-[5]"    style={{ fontFamily: 'Poppins',lineHeight: '1.2'}} 
             >
   here's a teeny-weeny glimpse of our work. What's coming later is
 </p>
