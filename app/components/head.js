@@ -1,12 +1,11 @@
 import Link from "next/link";
-
+import Logo from "../components/logo"
 export default function Header({ activeSection }) {
   return (
-    <header className="container mx-auto flex items-center justify-between  bg-gray-800 text-white">
-      {/* Logo on the Left */}
-      <div className="flex items-center">
-        <img src="/images/logo.svg" alt="Logo" className="h-20 w-20" />
-      </div>
+    <header className="container mx-auto flex items-center justify-between pt-10  bg-black text-white">
+      <a href="/" className="flex items-center">
+        <Logo/>
+      </a>
 
       {/* Text on the Right */}
       <div className="text-xl font-semibold">

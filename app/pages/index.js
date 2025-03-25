@@ -5,8 +5,8 @@ export default function HomePage() {
 
   
   return (
-  <div className="bg-gray-800">
- <Header activeSection="aboutus" />
+  <div className="bg-black">
+ <Header activeSection="" />
 <Banner/>
       </div> 
   )
