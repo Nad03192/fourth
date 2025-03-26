@@ -6,10 +6,10 @@ export default function FooterAll() {
   return (
 
     <div className=" bg-red-400 h-auto w-full">
-      <footer className="container w-full mx-auto bg-red-400 dark:bg-gray-900 sm:pt-20 pt-32">
+      <footer className="container w-full mx-auto bg-red-400 dark:bg-gray-900 sm:pt-20 pt-5">
         <div className="pb-3 container mx-auto">
                     {/* Grid Container */}
-          <div className="grid grid-cols-2 p-4 sm:pb-10 sm:p-0 sm:grid-cols-7 gap-0 gap-y-10 items-start ">
+          <div className="grid grid-cols-2 p-4 sm:pb-10 sm:p-0 sm:grid-cols-7 gap-0 gap-y-3  sm:gap-y-10 items-start ">
 
             {/* Pages Section */}
             <div className="flex flex-col items-start text-white">
@@ -42,10 +42,10 @@ export default function FooterAll() {
             <li>riyadh,KSA</li>
               </ul>
             </div>
-            <div className="col-span-4">
+            <div className="sm:col-span-4">
 
             </div>
-            <div className="flex flex-col items-start   text-white">
+            <div className="flex flex-col col-span-6 sm:col-span-1 items-start   text-white">
               <p className="text-[13px] mb-5">inquieries</p>
             <p className="text-xs font-semibold">briefme@mindspace-me.com</p>
             </div>
@@ -57,7 +57,7 @@ export default function FooterAll() {
 
   <div className="items-center space-x-5 flex flex-row ">
 
-  <div className="border-l-2 ml-3 border-white h-10 "></div>
+  <div className="border-l-0 sm:border-l-2 ml-3 border-white h-10 "></div>
   <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 50 50" className="hover:opacity-80 transition fill-white text-white">
     <path 
@@ -79,9 +79,9 @@ export default function FooterAll() {
 
             </div>
                
-                <div className="flex flex-row items-start space-x-2  text-[13px] text-white">
+                <div className="flex flex-row items-start sm:space-x-2 space-x-4 col-span-4 sm:col-span-1 text-[13px] text-white">
               <p >privacy policy</p>
-              <div className="border-l-1 border-white h-5 "></div>
+              <div className="sm:border-l-1 border-l-0 border-white h-5 "></div>
               <p >terms & condition</p>
             </div>
 
