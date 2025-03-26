@@ -4,7 +4,8 @@ import { useState } from "react";
 export default function Header({ activeSection }) {
     const [isOpen, setIsOpen] = useState(false);
   return (
-    <header className="container mx-auto flex items-center justify-between pt-10 p-1 bg-black text-white">
+ 
+    <header className="container mx-auto flex items-center justify-between pt-10 p-1 sm:p-0 bg-black text-white">
       <a href="/" className="flex items-center">
         <Logo/>
       </a>
@@ -113,5 +114,6 @@ export default function Header({ activeSection }) {
 
       </div>
     </header>
+ 
   );
 }
