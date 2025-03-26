@@ -5,7 +5,7 @@ export default function Header({ activeSection }) {
     const [isOpen, setIsOpen] = useState(false);
   return (
  
-    <header className="sticky top-0 z-50  container mx-auto flex items-center justify-between pt-12 p-1 sm:p-0 bg-black text-white">
+    <header className="sticky top-0 z-50  container mx-auto flex items-center justify-between pt-2 sm:pt-10 p-1 sm:p-0 bg-black text-white">
       <a href="/" className="flex items-center">
         <Logo/>
       </a>
