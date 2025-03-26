@@ -2,6 +2,7 @@
 import Header from "../components/head";
 import Banner from "../components/banner";
 import ImageGrid from "../components/imageswtext"
+import  FooterAll from "../components/footerall"
 export default function HomePage() {
 
     const items = [
@@ -21,6 +22,7 @@ export default function HomePage() {
 <Banner/>
   
 <ImageGrid items={items} />
+<FooterAll/>
 </div>
       </div> 
   )
