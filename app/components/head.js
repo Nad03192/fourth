@@ -72,7 +72,7 @@ export default function Header({ activeSection }) {
           )}
         </svg>
       </div>
-      <div className={`md:hidden fixed top-28 left-0 w-full h-full z-50  bg-black dark:bg-gray-800 transition-all duration-300 flex flex-col items-center pt-6 ${isOpen ? "block" : "hidden"}`}>
+      <div className={`md:hidden fixed top-20 left-0 w-full h-full z-50  bg-black dark:bg-gray-800 transition-all duration-300 flex flex-col items-center pt-6 ${isOpen ? "block" : "hidden"}`}>
   <div className="flex flex-col items-center space-y-6 py-4 px-4 text-center">
     {/* Links */}
     <div className="text-xl font-semibold">
