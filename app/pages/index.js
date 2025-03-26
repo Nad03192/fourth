@@ -13,7 +13,7 @@ export default function HomePage() {
 
       
   return (
-    <div className="bg-black w-full min-h-screen overflow-hidden">
+    <div className="bg-black w-full min-h-screen">
     <div>
 
  <Header activeSection="" />
