@@ -1,6 +1,6 @@
 export default function ImageGrid({ data }) {
     // Log the data for debugging purposes
-    console.log(data);
+    console.log(data.data.sections);
 
     return (
         <div className="container mx-auto relative h-full flex items-center justify-center bg-black text-white py-12">
@@ -19,12 +19,7 @@ export default function ImageGrid({ data }) {
                                 <h3 className="text-lg text-white font-semibold pb-1 pt-1">{section.title || 'Untitled'}</h3>
                                 {/* Fallback for missing subtitle */}
                                 <p className="text-sm text-white" dangerouslySetInnerHTML={{ __html: section.details.text || 'No description available' }}></p>
-                                {/* Optionally, display the CTA link */}
-                                {section.details.cta_link && (
-                                    <a href={section.details.cta_link} className="text-sm text-blue-500">
-                                        {section.details.cta_text || 'Learn more'}
-                                    </a>
-                                )}
+                               
                             </div>
                         </div>
                     ))
