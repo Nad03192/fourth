@@ -1,13 +1,11 @@
 "use client";
+import { GetStaticPropsContext } from 'next';
 
-import Homepage from "./pages/index";
-
-export default function Home() {
+import Homepage from "./pages/index";  
 
 
-  return (
- 
-      <Homepage/>
-  
-  );
+
+
+export default function HomePage() {
+  return <Homepage />;
 }
