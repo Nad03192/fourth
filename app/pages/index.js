@@ -3,6 +3,21 @@ import Header from "../components/head";
 import Banner from "../components/banner";
 import ImageGrid from "../components/imageswtext"
 import  FooterAll from "../components/footerall"
+import axios from "../utils/axios"
+let data;
+export async function getStaticProps({ locale }) {
+   
+    await axios
+      .get("/page/news", {
+        headers: {
+          "Accept-Language": locale,
+        },
+      })
+      .then((res) => {
+        data = res.data;
+      })
+      .catch(console.error);  return { props: { data } };
+   }
 export default function HomePage() {
 
     const items = [
@@ -21,7 +36,7 @@ export default function HomePage() {
 
 <Banner/>
   
-<ImageGrid items={items} />
+<ImageGrid items={items} data={data}/>
 <FooterAll/>
 </div>
       </div> 

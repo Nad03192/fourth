@@ -17,19 +17,4 @@ import axios from "axios";
  );
  instance.defaults.headers.post["Accept"] = "*/*";
  // instance.defaults.headers.common["Accept-Language"] = prefferedLang;
- export async function getStaticProps({ locale }) {
-    let data;
-    await axios
-      .get("/page/news", {
-        headers: {
-          "Accept-Language": locale,
-        },
-      })
-      .then((res) => {
-        data = res.data;
-      })
-      .catch(console.error);  return { props: { data } };
-   }
-   
-
  export default instance;

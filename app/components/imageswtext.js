@@ -1,4 +1,4 @@
-import axios from "../utils/axios";
+
 
 export default function ImageGrid({ items ,data}) {
    console.log(data);
