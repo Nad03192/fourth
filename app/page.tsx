@@ -1,5 +1,5 @@
 "use client";
-import { GetStaticPropsContext } from 'next';
+
 
 import Homepage from "./pages/index";  
 
