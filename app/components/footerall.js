@@ -5,7 +5,7 @@ import Image from "next/image";
 export default function FooterAll() {
   return (
 
-    <div className=" bg-[#f16b6b] h-auto w-full">
+    <div className=" bg-[#FF4A4A] h-auto w-full">
       <footer className="container w-full mx-auto bg-[] dark:bg-gray-900 sm:pt-20 pt-5">
         <div className="pb-3 container mx-auto">
                     {/* Grid Container */}
@@ -55,14 +55,15 @@ export default function FooterAll() {
 
 
             <Link href="/" className="max-w-full md:mt-[-5px]">
-  <div className="flex md:justify-center items-center  md:justify-self-end   text-white text-md  md:text-[20px] lg:text-[30px] font-bold max-w-[100%] overflow-hidden whitespace-nowrap">
+  <div className="flex r    text-white text-md  md:text-[20px] lg:text-[30px] font-bold max-w-[100%] overflow-hidden whitespace-nowrap">
     <p className="pr-5">mindspace</p>
   </div>
+ 
 </Link>
 
 
 <div className="items-center space-x-5 flex flex-row justify-self-start">
-  <div className="border-l-0 sm:border-l-2  border-white h-10"></div>
+<div className="border-l-0 sm:border-l-2  border-white h-10"></div>
 
   <a href="https://www.instagram.com/your-profile" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
     <svg
