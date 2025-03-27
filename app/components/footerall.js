@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 
-export default function FooterAll() {
+export default function FooterAll({metas}) {
+  console.log("m",metas);
   return (
 
     <div className=" bg-[#FF4A4A] h-auto w-full">

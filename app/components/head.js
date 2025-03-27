@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Logo from "../components/logo"
 import { useState } from "react";
-export default function Header({ activeSection }) {
+export default function Header({ activeSection ,links }) {
+    console.log("l",links);
     const [isOpen, setIsOpen] = useState(false);
   return (
  <div className="sticky bg-black w-full z-10 top-0 h-28 flex">
     <header className="sticky top-0 z-50 sm:h-28 container mx-auto flex items-center justify-between pt-2 sm:pt-0 p-1 sm:p-0 bg-black text-white">
-      <a href="/" className="flex items-center h-28 ">
+      <a href="/" className="flex items-center  ">
         <Logo/>
       </a>
 
