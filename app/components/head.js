@@ -15,7 +15,7 @@ export default function Header({ activeSection ,links }) {
       <div className="text-xl font-semibold hidden sm:flex">
         <div className="flex items-center gap-5">
           <Link
-            href=""
+            href="/aboutUs"
             className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'aboutus' ? 'font-bold text-white' : ''}`}
           >
             about us
@@ -79,7 +79,7 @@ export default function Header({ activeSection ,links }) {
     <div className="text-xl font-semibold">
       <div className="flex flex-col items-center gap-5">
         <Link
-          href=""
+          href="/aboutUs"
           className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'aboutus' ? 'font-bold text-white' : ''}`}
         >
           about us

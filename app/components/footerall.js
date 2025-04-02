@@ -5,9 +5,15 @@ import Image from "next/image";
 export default function FooterAll({metas}) {
   console.log("m",metas);
   return (
+<div className="flex flex-col h-auto">
 
-    <div className=" bg-[#FF4A4A] h-auto w-full">
-      <footer className="container w-full mx-auto bg-[] dark:bg-gray-900 sm:pt-20 pt-5">
+<div className="flex-grow ">
+ 
+</div>
+
+    <div className=" bg-[#FF4A4A] bottom-0 w-full mt-auto">
+
+      <footer className="container w-full mx-auto bg-[] dark:bg-gray-900 pt-5 sm:pt-20 mt-auto">
         <div className="pb-3 container mx-auto">
                     {/* Grid Container */}
           <div className="grid grid-cols-2 p-4 sm:pb-10 sm:p-0 sm:grid-cols-6 gap-0 gap-y-3  sm:gap-y-10 items-start ">
@@ -114,6 +120,7 @@ export default function FooterAll({metas}) {
          </div>
 
       </footer>
+    </div>
     </div>
   );
 }

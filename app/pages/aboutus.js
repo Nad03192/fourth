@@ -8,17 +8,8 @@ import axios from "../utils/axios";
 import  CardsSwipperComponent from "../components/swipper";
 
 
-export default function HomePage() {
-  const [data, setData] = useState(null);  // State for holding fetched data
+export default function AboutusPage() {
 
-  // Fetch the data when the component mounts
-  useEffect(() => {
-    axios.get("/page/news")
-      .then((response) => {
-        setData(response.data);  // Set the data to state when it's fetched
-      })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
   const [links, setLinks] = useState(null);  // State for holding fetched data
 
   // Fetch the data when the component mounts
@@ -53,20 +44,12 @@ export default function HomePage() {
       .catch(console.error);  // Handle any error in fetching
   }, []);  // Empty dependency array ensures it only runs once when the component mounts
 
-  const items = [
-    { image: "/images/im1.jpg", text: "Fizz The World", subtext: "Pepsi's Expo 2022 campaign" },
-    { image: "/images/im2.jpg", text: "A Display To Inspire The Everyday Chef", subtext: "We created our bespoke, modular displays that can be arranged in countless configurations." },
-    { image: "/images/im3.jpg", text: "The Optimum Nutrition For The Optimum Challenge", subtext: "Designed for elite athletes, this campaign highlighted high-performance nutrition to fuel endurance and strength training." },
-    { image: "/images/im4.jpg", text: "Biodegradable Product in an Eco-friendly Space", subtext: "For Nivea's new range of biodegradable wipes, we found the perfect balance between sustainability and innovation, creating a display that reinforces their commitment to a greener future." },
-  ];
-
   return (
-    <div className="bg-black w-full min-h-screen">
-      <Header activeSection="" links={links} />
-      <Banner />
-      
-      <ImageGrid items={items} data={data} />
-      
+    <div className="bg-black w-full space-y-6 ">
+      <Header activeSection="aboutus" links={links} />
+    
+      <CardsSwipperComponent slides={projects}/>
+     
       <FooterAll metas={metas} />
     </div>
   );
