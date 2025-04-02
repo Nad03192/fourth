@@ -53,6 +53,7 @@ export default function HomePage() {
       <Banner />
       {/* Pass data from state to ImageGrid */}
       <ImageGrid items={items} data={data} />
+      
       <FooterAll metas={metas} />
     </div>
   );
