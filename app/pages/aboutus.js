@@ -45,11 +45,13 @@ export default function AboutusPage() {
   }, []);  // Empty dependency array ensures it only runs once when the component mounts
 
   return (
-    <div className="bg-black w-full space-y-6 ">
+    <div className="bg-black flex flex-col w-full space-y-6 min-h-screen  ">
+       
+     
       <Header activeSection="aboutus" links={links} />
     
       <CardsSwipperComponent slides={projects}/>
-     
+      <div className="flex-1"></div>
       <FooterAll metas={metas} />
     </div>
   );

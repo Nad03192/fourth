@@ -17,28 +17,42 @@ const CardsSwipperComponent = ({ slides }) => {
   const router = useRouter(); // Hook for navigation
 
   return (
-    <div className="container mx-auto p-4 sm:p-0">
+    <div className="container mx-auto p-4 sm:p-0  mt-37 ">
       <Swiper
         modules={[Pagination, Autoplay]}
         pagination={{ clickable: false }}
         autoplay={{ delay: 6000 }}
+        breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
         loop
-        className="w-full pb-20 sm:h-[500px]"
+        className="w-full pb-20 sm:h-[500px] mt-auto"
       >
         {slides.data.map((slide, index) => (
           <SwiperSlide 
             key={slide.id || index} 
-            className="relative cursor-pointer"
-            onClick={() => router.push(`/project/${index}`)} // Navigate to project details page
+          
+     
           >
             <img 
               src={slide.image || "/default-image.jpg"} 
               alt={slide.title || "Project Image"}
-              className="w-full h-96 sm:h-[500px] object-fill transition-transform duration-300 hover:scale-105"
+              className="w-full h-96 sm:h-[500px] object-fit sm:w-[90%] transition-transform duration-300 hover:scale-105"
             />
-            <div className="absolute inset-0 flex items-center justify-center bg-opacity-50">
-              <h2 className="text-white text-2xl font-bold">{slide.title}</h2>
-            </div>
+        <div className="absolute inset-0 flex items-center justify-center bg-opacity-50 ">
+  <div className="text-center">
+    <h2 className="text-white text-3xl w-[90%] font-bold mb-4">{slide.title}</h2>
+    <button
+      onClick={() => router.push(`/project/${index}`)}
+      className="px-6 cursor-pointer py-2 border-[2px] border-[#FF4A4A] text-white text-lg font-semibold  hover:bg-[#e03e3e] transition duration-300 ease-in-out"
+    >
+      Know More
+    </button>
+  </div>
+</div>
+
           </SwiperSlide>
         ))}
       </Swiper>

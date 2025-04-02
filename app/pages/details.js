@@ -58,7 +58,7 @@ export default function ProjectDetail({ params }) {
   if (!project) return <p>Project not found.</p>; // Handle case if project is not found
 
   return (
-    <div className="bg-black w-full space-y-6  min-h-screen">
+    <div className="bg-black w-full space-y-6 flex flex-col  min-h-screen ">
       <Header activeSection="aboutus" links={links} />
     
 
@@ -78,6 +78,7 @@ export default function ProjectDetail({ params }) {
       </div>
    
       </div>
+      <div className="flex-1"></div>
      
       <FooterAll metas={metas} />
     </div>
