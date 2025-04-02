@@ -27,7 +27,7 @@ const CardsSwipperComponent = ({ slides }) => {
         pagination={{ clickable: false }}
         autoplay={{ delay: 6000 }}
         loop
-        className="w-full pb-20 sm:h-[600px]"
+        className="w-full pb-20 sm:h-[500px]"
       >
         {slides.data.map((slide, index) => (
           <SwiperSlide key={slide.id || index} className="relative">
@@ -35,7 +35,7 @@ const CardsSwipperComponent = ({ slides }) => {
             <img 
                 src={slide.image || '/default-image.jpg'} 
               
-                className="w-full h-96 sm:h-[600px] object-fill" 
+                className="w-full h-96 sm:h-[500px] object-fill" 
               />
             <div className="absolute inset-0 flex items-center justify-center bg-opacity-50">
               <h2 className="text-white text-2xl font-bold">{slide.title}</h2>
