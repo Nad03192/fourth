@@ -11,7 +11,7 @@ export default function FooterAll({metas}) {
  
 </div>
 
-    <div className=" bg-[#FF4A4A] bottom-0 w-full mt-auto">
+    <div className=" bg-[#FF4A4A]  w-full mt-auto static bottom-0">
 
       <footer className="container w-full mx-auto bg-[] dark:bg-gray-900 pt-5 sm:pt-20 mt-auto">
         <div className="pb-3 container mx-auto">
