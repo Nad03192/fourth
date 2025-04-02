@@ -20,14 +20,14 @@ const CardsSwipperComponent = ({ slides }) => {
   console.log("l", slides.data[0]?.image);
 
   return (
-    <div className="container mx-auto p-4 py-12 sm:p-0 pb-20  items-center">
+    <div className="container mx-auto p-4  sm:p-0">
       <Swiper
         modules={[ Pagination, Autoplay]}
        
         pagination={{ clickable: false }}
         autoplay={{ delay: 6000 }}
         loop
-        className="w-full pb-20 sm:h-[800px]"
+        className="w-full pb-20 sm:h-[600px]"
       >
         {slides.data.map((slide, index) => (
           <SwiperSlide key={slide.id || index} className="relative">
