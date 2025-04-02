@@ -20,7 +20,7 @@ export default function ImageGrid({ data }) {
                 <h3 className="text-lg text-white font-semibold pb-1 pt-1">
                   {section.title || 'Untitled'}
                 </h3>
-                <p className="text-sm text-white" dangerouslySetInnerHTML={{ __html: section.details.text || 'No description available' }}></p>
+                <p className="text-sm text-white" dangerouslySetInnerHTML={{ __html: section.details.text || '' }}></p>
               </div>
             </div>
           ))}
