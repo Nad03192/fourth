@@ -33,7 +33,7 @@ const CardsSwipperComponent = ({ slides }) => {
       >
         {slides.data.map((slide, index) => (
           <SwiperSlide key={slide.id || index} className="p-14  relative">
-          <a href={`/aboutUs/${slide.id}`} className="block">
+          <a href={`/aboutUs/${slide.id}`} className="block cursor-pointer">
             <img
               src={slide.image || "/default-image.jpg"}
               alt={slide.title || "Project Image"}
