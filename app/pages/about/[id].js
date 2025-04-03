@@ -41,10 +41,16 @@ export default function ProjectDetail({ params }) {
 
   if (loading) {
     return (
+        <div className="bg-black w-full space-y-6 flex flex-col min-h-screen">
+      <Header activeSection="aboutus" links={links} />
       <div className="flex justify-center items-center h-screen bg-black text-white">
         <div className="animate-spin rounded-full h-16 w-16 border-t-4 border-red-500"></div>
       
       </div>
+      <div className="flex-1"></div>
+
+<FooterAll metas={metas} />
+</div>
     );
   }
 
@@ -59,6 +65,7 @@ export default function ProjectDetail({ params }) {
       <Header activeSection="aboutus" links={links} />
 
       <div className="container mx-auto p-4 sm:p-0">
+        
         <div className="flex flex-col space-x-7 space-y-8 text-white">
           <div className="sm:w-[100%]">
             <img src={project.image} alt={project.title} className="w-full h-96 object-cover" />
