@@ -13,6 +13,7 @@ export default function ProjectPage({ params }: { params: Promise<{ id: string }
 
   return (
     <div>
+   
       <ProjectDetail params={id} />
     </div>
   );
