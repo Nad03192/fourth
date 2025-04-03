@@ -69,11 +69,12 @@ export default function ProjectDetail({ params }) {
     <h1 className="mt-4">{project.seo_description}</h1>
   </div>
 
-  <div className="flex flex-col sm:text-2xl font-bold w-full  flex-grow justify-end justify-self-end sm:text-right">
-    <h1 className="mt-4">CLIENT: {project.client}</h1>
-    <h1 className="mt-4">DIRECTOR(S): {project.directors}</h1>
-    <h1 className="mt-4">AGENCY: {project.agency}</h1>
+  <div className="flex flex-col sm:text-2xl font-bold w-full flex-grow sm:items-end ">
+  <div><h1 className="mt-4">CLIENT: {project.client}</h1>
+  <h1 className="mt-4">DIRECTOR(S): {project.directors}</h1>
+  <h1 className="mt-4">AGENCY: {project.agency}</h1>
   </div>
+</div>
 </div>
 
         </div>
