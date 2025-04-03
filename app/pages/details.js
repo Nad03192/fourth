@@ -5,53 +5,51 @@ import FooterAll from "../components/footerall";
 import axios from "../utils/axios";
 
 export default function ProjectDetail({ params }) {
-  const [links, setLinks] = useState(null);  // State for holding fetched data
-  const [projects, setProjects] = useState(null);  // State for holding fetched data
-  const [metas, setMetas] = useState(null);  // State for holding fetched data
+  const [links, setLinks] = useState(null);
+  const [projects, setProjects] = useState(null);  
+  const [metas, setMetas] = useState(null); 
 
-  // Fetch the data when the component mounts
   useEffect(() => {
     axios.get("/settings")
       .then((response) => {
-        setLinks(response.data);  // Set the data to state when it's fetched
+        setLinks(response.data);  
       })
       .catch(console.error);
   }, []);
 
-  // Fetch projects data
+ 
   useEffect(() => {
     axios.get("/projects")
       .then((response) => {
-        setProjects(response.data);  // Set the data to state when it's fetched
+        setProjects(response.data); 
       })
       .catch(console.error);
   }, []);
 
-  // Fetch metas data
   useEffect(() => {
     axios.get("/page/home")
       .then((response) => {
-        setMetas(response.data);  // Set the data to state when it's fetched
+        setMetas(response.data);  
       })
       .catch(console.error);
   }, []);
 
-  // Debugging output to check params and projects data
+  
   useEffect(() => {
-    console.log("Params ID: ", params); // Log params.id
-    console.log("Projects Data: ", projects?.data); // Log the projects.data array
+    console.log("Params ID: ", params); 
+    console.log("Projects Data: ", projects?.data); 
   }, [params, projects]);
 
-  // Handle the case where the projects data is not available yet
+
   if (!projects) return <p>Loading...</p>;
 
-  // Find the project that matches the params.id
-  const project = projects.data.find((p) => p.id === parseInt(params));  // Ensure the ID is compared correctly
 
-  // Check if the project was found and log for debugging
-  console.log("Found Project: ", project); // Log the found project
+  const project = projects.data.find((p) => p.id === parseInt(params)); 
 
-  // Handle the case where the project was not found
+  
+  console.log("Found Project: ", project); 
+
+  
   if (!project) return <p>Project not found.</p>;
 
   return (

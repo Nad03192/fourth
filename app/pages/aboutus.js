@@ -10,39 +10,36 @@ import  CardsSwipperComponent from "../components/swipper";
 
 export default function AboutusPage() {
 
-  const [links, setLinks] = useState(null);  // State for holding fetched data
+  const [links, setLinks] = useState(null);  
 
-  // Fetch the data when the component mounts
   useEffect(() => {
     axios.get("/settings")
       .then((response) => {
-        setLinks(response.data);  // Set the data to state when it's fetched
+        setLinks(response.data);  
       })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
-  const [projects, setProjects] = useState(null);  // State for holding fetched data
-  
-  // Fetch the data when the component mounts
+      .catch(console.error);  
+  }, []); 
+  const [projects, setProjects] = useState(null); 
+
   useEffect(() => {
     axios.get("/projects")
       .then((response) => {
-        setProjects(response.data);  // Set the data to state when it's fetched
+        setProjects(response.data); 
       })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
+      .catch(console.error);  
+  }, []); 
   
   
-  const [metas, setMetas] = useState(null);  // State for holding fetched data
+  const [metas, setMetas] = useState(null); 
 
 
-  // Fetch the data when the component mounts
   useEffect(() => {
     axios.get("/page/home")
       .then((response) => {
-        setMetas(response.data);  // Set the data to state when it's fetched
+        setMetas(response.data); 
       })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
+      .catch(console.error);  
+  }, []);  
 
   return (
     <div className="bg-black flex flex-col w-full space-y-6 min-h-screen  ">
