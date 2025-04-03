@@ -38,7 +38,7 @@ export default function ProjectDetail({ params }) {
 
   // Debugging output to check params and projects data
   useEffect(() => {
-    console.log("Params ID: ", params); // Log params.id
+    console.log("Params ID: ", params.id); // Log params.id
     console.log("Projects Data: ", projects?.data); // Log the projects.data array
   }, [params, projects]);
 
@@ -46,7 +46,7 @@ export default function ProjectDetail({ params }) {
   if (!projects) return <p>Loading...</p>;
 
   // Find the project that matches the params.id
-  const project = projects.data.find((p) => p.id === parseInt(params));  // Ensure the ID is compared correctly
+  const project = projects.data.find((p) => p.id === parseInt(params.id));  // Ensure the ID is compared correctly
 
   // Check if the project was found and log for debugging
   console.log("Found Project: ", project); // Log the found project

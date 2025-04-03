@@ -45,7 +45,7 @@ const CardsSwipperComponent = ({ slides }) => {
   <div className="text-center">
     <h2 className="text-white text-3xl w-[90%] font-bold mb-4">{slide.title}</h2>
     <button
-      onClick={() => router.push(`/about/${index}`)}
+      onClick={() => router.push(`/about/${slide.id}`)}
       className="px-6 cursor-pointer py-2 border-[2px] border-[#FF4A4A] text-white text-lg font-semibold  hover:bg-[#e03e3e] transition duration-300 ease-in-out"
     >
       Know More
