@@ -5,53 +5,27 @@ import Banner from "../components/banner";
 import ImageGrid from "../components/imageswtext";
 import FooterAll from "../components/footerall";
 import axios from "../utils/axios";
-import  CardsSwipperComponent from "../components/swipper";
-
+import CardsSwipperComponent from "../components/swipper";
 
 export default function HomePage() {
-  const [data, setData] = useState(null);  // State for holding fetched data
+  const [data, setData] = useState(null);
+  const [links, setLinks] = useState(null);
+  const [projects, setProjects] = useState(null);
+  const [metas, setMetas] = useState(null);
+  const [loading, setLoading] = useState(true); // Added loading state
 
-  // Fetch the data when the component mounts
   useEffect(() => {
-    axios.get("/page/news")
-      .then((response) => {
-        setData(response.data);  // Set the data to state when it's fetched
-      })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
-  const [links, setLinks] = useState(null);  // State for holding fetched data
-
-  // Fetch the data when the component mounts
-  useEffect(() => {
-    axios.get("/settings")
-      .then((response) => {
-        setLinks(response.data);  // Set the data to state when it's fetched
-      })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
-  const [projects, setProjects] = useState(null);  // State for holding fetched data
-  
-  // Fetch the data when the component mounts
-  useEffect(() => {
-    axios.get("/projects")
-      .then((response) => {
-        setProjects(response.data);  // Set the data to state when it's fetched
-      })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
-  
-  
-  const [metas, setMetas] = useState(null);  // State for holding fetched data
-
-
-  // Fetch the data when the component mounts
-  useEffect(() => {
-    axios.get("/page/home")
-      .then((response) => {
-        setMetas(response.data);  // Set the data to state when it's fetched
-      })
-      .catch(console.error);  // Handle any error in fetching
-  }, []);  // Empty dependency array ensures it only runs once when the component mounts
+    axios.get("/page/news").then((response) => setData(response.data)).catch(console.error);
+    axios.get("/settings").then((response) => setLinks(response.data)).catch(console.error);
+    axios.get("/projects").then((response) => {
+      setProjects(response.data);
+      setLoading(false); // Stop loading when data is fetched
+    }).catch((error) => {
+      console.error(error);
+      setLoading(false);
+    });
+    axios.get("/page/home").then((response) => setMetas(response.data)).catch(console.error);
+  }, []);
 
   const items = [
     { image: "/images/im1.jpg", text: "Fizz The World", subtext: "Pepsi's Expo 2022 campaign" },
@@ -64,9 +38,14 @@ export default function HomePage() {
     <div className="bg-black w-full min-h-screen">
       <Header activeSection="" links={links} />
       <Banner />
-      
-      <ImageGrid items={items} data={data} />
-      
+      {loading ? (
+        <div className="flex justify-center items-center h-screen text-white">
+          <div className="w-16 h-16 border-4 border-gray-200 border-t-red-500 rounded-full animate-spin"></div>
+        </div>
+      ) : (
+        <ImageGrid items={items} data={data} />
+      )}
+     
       <FooterAll metas={metas} />
     </div>
   );
