@@ -55,9 +55,9 @@ export default function FooterAll({metas}) {
             </div>
 
 
-            <Link href="/" className="max-w-full md:mt-[-5px]">
+            <Link href="/" className="max-w-full md:mt-[-5px] justify-self-end">
   <div className="flex r    text-white text-md  md:text-[20px] lg:text-[30px] font-bold max-w-[100%] overflow-hidden whitespace-nowrap">
-    <p className="pr-5">mindspace</p>
+    <p className="pr-5 w-full">mindspace</p>
   </div>
  
 </Link>

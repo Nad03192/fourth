@@ -21,7 +21,7 @@ export default function Header({ activeSection ,links }) {
             about us
           </Link>
           <Link
-            href="/ourwork"
+            href="/ourWork"
             className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'ourwork' ? 'font-bold text-white' : ''}`}
           >
             our work
@@ -85,7 +85,7 @@ export default function Header({ activeSection ,links }) {
           about us
         </Link>
         <Link
-          href="/ourwork"
+          href="/ourWork"
           className={`text-gray-400 text-[17px] font-bold hover:text-white hover:border-b-2 hover:border-blue-500 dark:text-white dark:hover:text-blue-400 ${activeSection === 'ourwork' ? 'font-bold text-white' : ''}`}
         >
           our work
