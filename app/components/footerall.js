@@ -46,7 +46,7 @@ export default function FooterAll({metas}) {
             <div className="sm:col-span-2">
 
             </div>
-            <div className="flex flex-col col-span-6 sm:col-span-2  text-white">
+            <div className="flex flex-col col-span-6 sm:col-span-2  sm:justify-self-end text-white">
               <p className="text-md mb-5">inquieries</p>
               <a href="mailto:briefme@mindspace-me.com" className="text-[16px] font-semibold text-white hover:underline">
   briefme@mindspace-me.com
@@ -97,7 +97,7 @@ export default function FooterAll({metas}) {
 
             </div>
                
-            <div className="flex flex-row items-start sm:space-x-2 space-x-4 col-span-4 sm:col-span-2 text-[16px] text-white">
+            <div className="flex flex-row items-start sm:items-end sm:justify-self-end sm:space-x-1 space-x-4 col-span-4 sm:col-span-2 text-[14px] text-white">
   <Link href="/privacy-policy" className="hover:underline hover:opacity-80 transition duration-200 ease-in-out">
     <p>Privacy Policy</p>
   </Link>
