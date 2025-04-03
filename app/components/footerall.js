@@ -55,12 +55,13 @@ export default function FooterAll({metas}) {
             </div>
 
 
-            <Link href="/" className="max-w-full md:mt-[-5px] justify-self-end">
-  <div className="flex r    text-white text-md  md:text-[20px] lg:text-[30px] font-bold max-w-[100%] overflow-hidden whitespace-nowrap">
-    <p className="pr-5 w-full">mindspace</p>
-  </div>
+            <Link href="/" className="max-w-full md:mt-[-10px] w-full">
+ 
+    <p className="w-full  text-ellipsis md:text-clip   text-white " style={{ fontSize: "2.7vw" }}>mindspace</p>
  
 </Link>
+
+
 
 
 <div className="items-center space-x-5 flex flex-row justify-self-start">
