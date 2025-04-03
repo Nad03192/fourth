@@ -39,7 +39,7 @@ const CardsSwipperComponent = ({ slides }) => {
             <img 
               src={slide.image || "/default-image.jpg"} 
               alt={slide.title || "Project Image"}
-              className="w-full h-96 sm:h-[500px] object-fit sm:w-[100%] transition-transform duration-300 hover:scale-105"
+              className="w-full h-96 sm:h-[500px] object-cover sm:w-[100%] transition-transform duration-300 hover:scale-105"
             />
         <div className="absolute inset-0 flex items-center justify-center bg-opacity-50 ">
   <div className="text-center justify-items-center">
