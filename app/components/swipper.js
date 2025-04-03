@@ -17,7 +17,7 @@ const CardsSwipperComponent = ({ slides }) => {
   const router = useRouter(); // Hook for navigation
 
   return (
-    <div className="container mx-auto p-4 sm:p-0 md:mt-37 md:mb-37 relative">
+    <div className="container mx-auto p-4 sm:p-0 md:mt-10 md:mb-37 relative">
       <Swiper
         modules={[Pagination, Autoplay, Navigation]}
         pagination={{ clickable: true, dynamicBullets: true }}
