@@ -1,6 +1,6 @@
 "use client";
 import Homepage from "../pages/index"
-import  AboutusPage from "../pages/aboutus"
+import  AboutusPage from "../pages/about/index"
 
 export default function Home() {
 

@@ -1,11 +1,10 @@
 "use client";
 import { useState, useEffect } from "react";
-import Header from "../components/head";
-import Banner from "../components/banner";
-import ImageGrid from "../components/imageswtext";
-import FooterAll from "../components/footerall";
-import axios from "../utils/axios";
-import  CardsSwipperComponent from "../components/swipper";
+import Header from "../../components/head";
+
+import FooterAll from "../../components/footerall";
+import axios from "../../utils/axios";
+import  CardsSwipperComponent from "../../components/swipper";
 
 
 export default function AboutusPage() {

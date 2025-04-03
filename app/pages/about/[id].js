@@ -1,8 +1,8 @@
 "use client";
 import { useState, useEffect } from "react";
-import Header from "../components/head";
-import FooterAll from "../components/footerall";
-import axios from "../utils/axios";
+import Header from "../../components/head.js";
+import FooterAll from "../../components/footerall";
+import axios from "../../utils/axios";
 
 export default function ProjectDetail({ params }) {
   const [links, setLinks] = useState(null); 

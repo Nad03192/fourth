@@ -1,7 +1,7 @@
 "use client";  
 
 import { use } from "react"; 
-import ProjectDetail from "../../pages/details";
+import ProjectDetail from "../../pages/about/[id].js";
 
 export default function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = use(params);  
